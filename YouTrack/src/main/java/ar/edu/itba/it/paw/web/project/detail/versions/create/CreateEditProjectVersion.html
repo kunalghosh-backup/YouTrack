@@ -1,0 +1,53 @@
+<html>
+	<body>
+		<wicket:extend>
+			<div>
+				<a class="btn right" wicket:id="backToProjectDetail"><i class="icon-arrow-left"></i> <wicket:message key="backToProjectBtn" /></a>
+				<div class="clear"></div>
+			</div>
+			<form wicket:id="createVersionForm" class="form-horizontal modal-body">
+				<fieldset>
+					<legend><wicket:message key="projectCreateVersionTitle" /></legend>		
+					<div class="alert alert-error control-group" wicket:id="feedback"></div>
+
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="name" /></label>
+						<div class="controls">
+							<input class="input-xlarge" wicket:id="name" />
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="estimatedReleaseTime" /></label>
+						<div class="controls">
+							<input class="input-xlarge" wicket:id="releaseDate" />
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="description" /></label>
+						<div class="controls">
+							<textarea class="input-xlarge" wicket:id="description" rows="4" cols="50"></textarea>
+						</div>
+					</div>
+					<wicket:enclosure child="status">
+					<div class="control-group">
+						<label class="control-label"><wicket:message key=status" /></label>
+						
+						<div class="controls">
+							<select wicket:id="status" />
+						</div>
+					</div>
+					</wicket:enclosure>
+					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary" wicket:id="createProjectVersionButton" href="#"><wicket:message key="createVersionButton" /></button>
+						<button type="submit" class="btn btn-primary" wicket:id="saveProjectVersionButtonTaskButton" href="#"><wicket:message key="saveVersionButton" /></button>
+						<button type="reset" class="btn" wicket:id="cancel"><wicket:message key="cancel" /></button>
+					</div>
+			
+				</fieldset>
+			</form>
+		</wicket:extend>
+	</body>
+</html>

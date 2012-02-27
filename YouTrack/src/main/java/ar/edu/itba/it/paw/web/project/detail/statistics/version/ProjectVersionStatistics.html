@@ -1,0 +1,48 @@
+<html>
+	<body>
+	<wicket:head>
+		    <script type="text/javascript" src="js/kendo.all.min.js"></script>
+   			<link type="text/css" href="css/kendo.common.min.css" rel="stylesheet" />
+   			<link type="text/css" href="css/kendo.default.min.css" rel="stylesheet" />
+	    <script type="text/javascript">
+        function createChart() {
+            $("#chart").kendoChart({
+                theme: $(document).data("kendoSkin") || "blueOpal",
+                legend: {
+                    position: "bottom"
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: true,
+                        template: "#= category #"
+                    }
+                },
+                series: [{
+                    type: "pie",
+                    data: versions
+                }],
+                tooltip: {
+                    visible: true,
+                    format:"{0} min"
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            setTimeout(function() {
+                createChart();
+                $("#example").bind("kendo:skinChange", function(e) {
+                    createChart();
+                });
+            }, 400);
+        });
+    </script>
+	</wicket:head>
+	<wicket:panel>
+		<div class="centered-text"><h2><wicket:message key="priorityGraph" /></h2></div>
+		<div class="chart-wrapper" style="margin-top:30px;">
+            <div id="chart"></div>
+        </div>
+	</wicket:panel>
+	</body>
+</html>

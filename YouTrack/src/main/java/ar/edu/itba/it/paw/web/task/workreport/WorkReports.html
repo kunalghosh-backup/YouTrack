@@ -1,0 +1,47 @@
+<html>
+	<body>
+		<wicket:panel>
+			<wicket:enclosure child="reports">
+				<table style="width:100%;" class="table">
+					<thead>
+						<tr>
+							<th><wicket:message key="date" /></th>
+							<th><wicket:message key="work" /></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="reports">
+							<td wicket:id="reportedAt"></td>
+							<td>
+								<div><b><wicket:message key="author" />: </b><span wicket:id="author"></span></div>
+								<div><b><wicket:message key="duration" />: </b><span wicket:id="duration"></span></div>
+								<div><b><wicket:message key="description" />: </b><span wicket:id="description" /></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</wicket:enclosure>
+			<div wicket:id="noReports" class="emptyMessage"></div>
+			<form wicket:id="reportWorkForm">
+				<fieldset>
+					<legend><wicket:message key="reportWork" /></legend>
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="duration" /></label>
+						<div class="controls">
+							<input class="input-xlarge" wicket:id="duration" autocomplete="off" />
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="description" /></label>
+						<div class="controls">
+							<textarea class="input-xlarge" wicket:id="description" autocomplete="off"></textarea>
+						</div>
+					</div>
+					<div class="form-actions">
+						<button class="btn btn-primary" type="submit"><wicket:message key="reportWork" /></button>						
+					</div>
+				</fieldset>
+			</form>
+		</wicket:panel>
+	</body>
+</html>

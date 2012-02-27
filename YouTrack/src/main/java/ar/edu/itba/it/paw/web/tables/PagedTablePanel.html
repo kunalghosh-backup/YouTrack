@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<wicket:panel>
+			<div wicket:id="emptyMessage" class="centered-text"></div>
+			<wicket:enclosure child="elements">
+			<table id="elements_table" class="table-striped table-bordered">
+				<wicket:child />
+				<tfoot>
+					<tr>
+						<td wicket:id="paginator" class="centered-text" colspan="10"></td>
+					</tr>
+				</tfoot>
+			</table>
+			</wicket:enclosure>
+		</wicket:panel>
+	</body>
+</html>

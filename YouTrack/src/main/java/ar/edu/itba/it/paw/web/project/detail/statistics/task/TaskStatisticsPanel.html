@@ -1,0 +1,62 @@
+<html>
+	<body>
+		<wicket:panel>
+			<h3><wicket:message key="projectTasksStadisticsListTitle" /></h3>
+			<table class="table-bordered table-striped" style="width:100%;">
+				  <thead>
+				    <tr>
+				      <th><wicket:message key="status" /></th>
+				      <th><wicket:message key="amountOfTask" /></th>
+				      <th><wicket:message key="estimatedTime" /></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+						<td class="centered-text">
+							<span wicket:id="statusOpen"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="openAmount"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="openEstimatedTime"></span>
+						</td>
+				    </tr>
+				    <tr>
+						<td class="centered-text">
+							<span wicket:id="statusOnGoing"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="onGoingAmount"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="onGoingEstimatedTime"></span>
+						</td>
+				    </tr>
+				    <tr>
+						<td class="centered-text">
+							<span wicket:id="statusClosed"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="closedAmount"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="closedEstimatedTime"></span>
+						</td>
+				    </tr>
+				    <tr>
+						<td class="centered-text">
+							<span wicket:id="statusCompleted"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="completedAmount"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="completedEstimatedTime"></span>
+						</td>
+				    </tr>
+				  </tbody>
+			</table>
+		</wicket:panel>
+	</body>
+</html>

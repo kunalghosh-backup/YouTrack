@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<wicket:extend>
+		<div>
+			<a class="btn right" wicket:id="backToProjectDetail"><i class="icon-arrow-left"></i> <wicket:message key="backToProjectBtn" /></a>
+			<div class="clear"></div>
+		</div>
+		<div class="well" style="margin-top:10px;">
+			<form wicket:id="addMemberForm" class="form-horizontal modal-body">
+				<fieldset>
+					<legend><wicket:message key="addMember" /></legend>
+					<div class="alert alert-error control-group" wicket:id="feedback"></div>
+					<div class="control-group">
+						<label><wicket:message key="newMember" /></label>
+						<div class="controls">
+							<select class="input-xlarge" wicket:id="newMember" />
+						</div>
+					</div>					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary" href="#"><wicket:message key="addMemberButton" /></button>
+						<button type="reset" class="btn" wicket:id="cancel"><wicket:message key="cancelButton" /></button>
+					</div>
+			
+				</fieldset>
+			</form>
+		</div>
+		</wicket:extend>
+	</body>
+</html>

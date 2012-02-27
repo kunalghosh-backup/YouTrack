@@ -1,0 +1,30 @@
+<html>
+<body>
+	<wicket:panel>
+		<h3><wicket:message key="lastTaskChangesPanelTitle" /></h3>
+		<wicket:enclosure child="elements">
+		<table class="table-bordered table-striped" style="width:100%;">
+			<thead>
+			<tr>
+				<th><wicket:message key="date" /></th>
+				<th><wicket:message key="task" /></th>
+				<th><wicket:message key="edithor" /></th>
+				<th><wicket:message key="lastValue" /></th>
+				<th><wicket:message key="newValue" /></th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr wicket:id="elements">
+					<td class="centered-text"><span wicket:id="createdAt"></span></td>
+					<td class="centered-text"><span wicket:id="task"></span></td>
+					<td class="centered-text"><span wicket:id="edithor"></span></td>
+					<td class="centered-text"><span wicket:id="oldValue"></span></td>
+					<td class="centered-text"><span wicket:id="newValue"></span></td>
+				</tr>
+			</tbody>
+		</table>
+		</wicket:enclosure>
+		<div wicket:id="emptyMessage" class="emptyMessage"></div>
+	</wicket:panel>
+</body>
+</html>

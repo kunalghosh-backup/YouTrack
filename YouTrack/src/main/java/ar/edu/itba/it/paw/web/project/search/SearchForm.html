@@ -1,0 +1,106 @@
+<html>
+	<body>
+		<wicket:extend>
+			<form wicket:id="searchForm">
+				<fieldset>
+					<legend><wicket:message key="advancedSearch" /></legend>
+					<div wicket:id="feedback" class="alert alert-error control-group"></div>
+					<div class="row">
+						<div class="span6">
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="code" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="code" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="title" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="title" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="description" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="description" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="creator" /></label>
+								<div class="controls">
+									<input type="text" class="input-xlarge" wicket:id="creator" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="datefrom" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="datefrom" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="dateto" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="dateto" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="owner" /></label>
+								<div class="controls">
+									<input type="text" class="input-xlarge" wicket:id="owner" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="priority" /></label>
+								<div class="controls">
+									<select class="input-xlarge" wicket:id="priority"></select>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="status" /></label>
+								<div class="controls">
+									<select class="input-xlarge" wicket:id="status"></select>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="type" /></label>
+								<div class="controls">
+									<select class="input-xlarge" wicket:id="type"></select>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="version" /></label>
+								<div class="controls">
+									<select class="input-xlarge" wicket:id="version"></select>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="affectedVersion" /></label>
+								<div class="controls">
+									<select class="input-xlarge" wicket:id="affectedVersion"></select>
+								</div>
+							</div>
+							
+							<div class="form-actions">
+								<button class="btn btn-primary" type="submit"><wicket:message key="runSearch" /></button>
+							</div>
+							
+						</div>
+					</div>
+					
+				</fieldset>
+			</form>
+		</wicket:extend>
+	</body>
+</html>

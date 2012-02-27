@@ -1,0 +1,301 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: Arial, sans-serif;
+	color:#323232;
+	font-size:13px;
+}
+.label_project{
+	font-weight: normal;	
+}
+.add_user {
+	width: 445px;
+}
+
+.max_widht {
+	width: 990px;	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;	
+}
+
+a img {
+	border:0;	
+}
+
+a, a:link, a:visited, a:active {
+	color:#0033cc;
+}
+
+.bold_text {
+	font-weight: bold;
+}
+
+.left {
+	float:left;	
+}
+
+.right {
+	float:right;
+}
+
+.clear {
+	clear:both;	
+}
+
+.container {
+	width:990px;
+	margin:0 auto;
+}
+
+#header {
+	border-bottom: 1px #f6f6f6 solid;
+}
+
+#content {
+	min-height: 500px;
+}
+
+#footer {
+	border-top: 1px #f6f6f6 solid;
+	margin-top:5px;
+}
+
+#header .toolbar {
+	margin: 16px 5px 0 0;
+}
+
+.logLinks {
+	margin-top:15px;	
+}
+
+/*----------MESSAGE BOXES-------------*/
+
+/* ERRORS */
+
+.error_box {
+	text-align:center;	
+	font-size:13px;
+	background:#ffd8d8;
+	color:#bc0000;
+}
+
+.error_box ul {
+	padding:5px 0;
+	border: 1px #bc0000 solid;
+	list-style: none;
+}
+
+.empty_list_message {
+	text-align:center;
+	font-size:15px;
+	padding:30px;
+	color:#767676;
+}
+
+/*---------- MENU STYLES -------------*/
+.horizontal_menu {
+	border-bottom: 1px #f6f6f6 solid;
+	margin-top:3px;
+}
+
+.horizontal_menu_item, .vertical_menu_item, .menu_item {
+	border-top: 1px #f6f6f6 solid;
+	border-left: 1px #f6f6f6 solid;
+	border-right: 1px #f6f6f6 solid;
+	padding: 2px 5px 3px 5px;
+	font-size:13px;
+	font-weight: bold;
+	background: #fdfdfd;
+}
+
+.vertical_menu_item {
+	width:100px;
+	text-align:center;
+	border-bottom: 1px #f6f6f6 solid;
+}
+
+.horizontal_menu_item {
+	margin: 0 3px 0 3px;
+	float:left;
+}
+
+.horizontal_menu_item:hover, .vertical_menu_item:hover, .menu_item:hover {
+	background: #f9f9f9;
+}
+
+.horizontal_menu_item a, 
+.horizontal_menu_item a:visited, 
+.horizontal_menu_item a:link,
+.horizontal_menu_item a:active,
+.vertical_menu_item a, 
+.vertical_menu_item a:visited, 
+.vertical_menu_item a:link,
+.vertical_menu_item a:active,
+.menu_item a,
+.menu_item a:visited,
+.menu_item a:link,
+.menu_item a:active {
+	text-decoration: none;
+	color:#323232;
+}
+
+/*----------------TABLE STYLES------------------*/
+
+.classic_table {
+	border:1px #f6f6f6 solid;
+}
+
+.classic_table thead tr {
+	background: #f6f6f6;
+}
+
+.classic_table thead tr th {
+	padding:3px 5px;
+	text-align:center;	
+}
+
+.classic_table tbody tr td {
+	border-top: 1px #f6f6f6 solid;
+	text-align:center;
+}
+
+.classic_table .type1{
+	background:#ffffff;
+}
+
+.classic_table .type2{
+	background:#fcfcfc;
+}
+
+.classic_table button {
+	padding:1px;
+	margin:1px;
+}
+
+/*-----------------FORM STYLES---------------------*/
+
+fieldset {
+	border: 1px #aeaeae solid;
+}
+
+legend {
+	font-size:16px;
+	font-weight:bold;
+	color:#888888;
+}
+
+label {
+	font-weight: bold;
+	font-size:14px;
+}
+
+input[type="text"], input[type="password"], textarea {
+	border: 1px #aeaeae solid;
+	background:#fbfbfb;
+	padding:3px;
+}
+
+input[type="submit"], input[type="reset"], button {
+	padding:3px 5px;
+}
+
+select {
+	border: 1px #aeaeae solid;
+	padding:2px 3px;
+}
+
+.createFormRow td {
+	padding: 5px 0;
+}
+
+
+/*------------------FORM LOGIN-------------*/
+
+#login_fieldset {
+	margin:30px 10px 40px 10px;
+	padding:20px;
+}
+
+/*-----------------HOME-------------------*/
+
+#projects_table {
+	width:100%;
+}
+
+#projects_table .project_name_column {
+	text-align:left;
+}
+
+/*-----------------USERS------------------*/
+
+.toolbar button{
+	margin:10px 0 5px 0;
+	font-size:12px;
+	color:#323232;
+}
+
+/*--------------PROJECT DETAILS-----------*/
+
+.project_data{
+	width:100%;
+}
+
+/*--------------WORKING PROJECT-----------*/
+
+#project_title {
+	font-size:20px;
+	font-weight:bold;
+}
+
+.empty_owner {
+	font-style:italic;
+}
+
+#task_table {
+	width:100%;	
+}
+
+.bar_button {
+	padding:2px;	
+}
+
+/*------------FORM DESCRIPTION------------*/
+
+#text_area_desc{
+	width: 445px;
+	}
+
+/*------------TASK DETAIL-----------------*/
+
+.task_subtitle, .project_subtitle {
+	padding-top:10px;
+	font-weight: bold;
+	font-size:14px;
+	color:#919191;
+}
+
+.main_menu {
+	background:#ffe9d8;
+	padding:7px;
+	margin: 5px 0;
+	color:#ffffff;	
+}
+
+.main_menu a {
+	padding:3px 5px;
+	font-weight: bold;
+	text-decoration: none;
+	background:#ff8330;
+	color:#ffffff;	
+}
+
+.main_menu a:FIRST-CHILD {
+	margin-left: -2px;
+}
+
+.main_menu a:hover {
+	text-decoration:underline;
+}

@@ -1,0 +1,74 @@
+<html>
+	<body>
+		<wicket:panel>
+			<form wicket:id="createUserForm">
+				<fieldset>
+					<legend><wicket:message key="createUser" /></legend>
+					<div class="alert alert-error control-group" wicket:id="feedback"></div>
+					<div class="row" style="padding-top:10px;">
+						<div class="span">
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="userName" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="userName" autocomplete="off" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="password" /></label>
+								<div class="controls">
+									<input type="password" class="input-xlarge" wicket:id="password" autocomplete="off" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="passwordConfirmation" /></label>
+								<div class="controls">
+									<input type="password" class="input-xlarge" wicket:id="passwordConfirm" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="span">
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="name" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="name" autocomplete="off" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="lastName" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="lastName" autocomplete="off" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="email" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="email" autocomplete="off" />
+								</div>
+							</div>
+						</div>					
+					</div>
+					<wicket:enclosure child="captchaImage">
+						<div>
+							<div style="margin:10px 0;">
+								<div><b><wicket:message key="securityCode" /></b></div>
+								<wicket:message key="captchaDescription" />
+								<img class="thumbnail" wicket:id="captchaImage" />
+							</div>
+							<div>
+								<input wicket:id="captchaText" id="password" type="text" size="40" />
+							</div>
+						</div>
+					</wicket:enclosure>
+					<div class="form-actions">
+						<button class="btn btn-primary" type="submit"><wicket:message key="createUser" /></button>						
+					</div>
+				</fieldset>
+			</form>
+		</wicket:panel>
+	</body>
+</html>

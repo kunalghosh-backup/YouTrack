@@ -1,0 +1,63 @@
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.clear {
+	clear:both;
+}
+
+.logLinks {
+	margin-top:20px;
+}
+
+.languageBox {
+	margin-top:10px;
+	border-top: 1px solid #f8f8f8;
+	text-align:right;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+#elements_table {
+	margin-top:10px;
+	width:100%;
+}
+
+.projectActionPanelBtn {
+	padding:5px 2px;
+	float:left;
+}
+
+#taskDetail {
+	margin-top:10px;
+}
+
+.emptyDataLabel {
+	font-style: italic;
+}
+
+.emptyMessage {
+	text-align: center;
+	font-style: italic;
+}
+
+.cooldatatable {
+	text-align:center;
+	width:100%;
+	margin-top:10px;
+}
+
+.cooldatatable tfoot .navigator {
+	border-top:1px solid #DDD;
+}
+
+.cooldatatable .norecords-td {
+	background:#f9f9f9;
+	border-top:1px solid #DDD;
+}

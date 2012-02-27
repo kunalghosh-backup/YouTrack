@@ -1,0 +1,49 @@
+<html>
+	<body>
+		<wicket:extend>
+			<form wicket:id="createProjectForm" class="form-horizontal">
+				<fieldset>
+					<legend><wicket:message key="createProjectLegend" /></legend>
+					
+					<div class="alert alert-error control-group" wicket:id="feedback"></div>
+
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="title" />:</label>
+						<div class="controls">
+							<input class="input-xlarge" wicket:id="title" />
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="code" />:</label>
+						<div class="controls">
+							<input class="input-xlarge" wicket:id="code" />
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="description" />:</label>
+						<div class="controls">
+							<textarea class="input-xlarge" wicket:id="description" rows="4" cols="50"></textarea>
+						</div>
+					</div>
+					
+					
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="projectLider" /></label>
+						<div class="controls">
+							<select wicket:id="lider"></select>
+						</div>
+					</div>
+					
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary" wicket:id="createProjectButton" href="#"><wicket:message key="createProjectButton" /></button>
+						<button type="submit" class="btn btn-primary" wicket:id="saveProjectButtonTaskButton" href="#"><wicket:message key="saveProjectButton" /></button>
+						<button type="reset" class="btn" wicket:id="cancel"><wicket:message key="cancelButton" /></button>
+					</div>
+						
+				</fieldset>
+			</form>
+		</wicket:extend>
+	</body>
+</html>

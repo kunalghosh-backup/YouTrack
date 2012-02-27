@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<wicket:extend>
+			<a wicket:id="backToUsers" class="btn"><i class="icon-arrow-left"></i> <wicket:message key="backToUsers" /></a>
+			<wicket:enclosure child="requests">
+				<table style="width:100%;margin-top:10px;" class="table-bordered table-striped">
+					<thead>
+						<tr>
+							<th><wicket:message key="username" /></th>
+							<th><wicket:message key="fullname" /></th>
+							<th><wicket:message key="email" /></th>
+							<th><wicket:message key="actions" /></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="requests">
+							<td wicket:id="userName" class="centered-text"></td>
+							<td wicket:id="fullName" class="centered-text"></td>
+							<td wicket:id="email" class="centered-text"></td>
+							<td class="centered-text">
+								<a wicket:id="accept"><i class="icon-ok-sign"></i></a>
+								<a wicket:id="reject"><i class="icon-remove-sign"></i></a>
+							</td>					
+						</tr>
+					</tbody>
+				</table>
+			</wicket:enclosure>
+			<div wicket:id="emptyMessage" class="emptyMessage"></div>
+		</wicket:extend>
+	</body>
+</html>

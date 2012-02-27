@@ -1,0 +1,34 @@
+<html>
+	<body>
+		<wicket:extend>
+		<a class="btn right" style="margin:10px;" wicket:id="backToProjectDetail"><i class="icon-arrow-left"></i> <wicket:message key="backToProjectBtn" /></a>
+		<form wicket:id="logWorkForm" class="form-vertical">
+			<fieldset>
+				<legend><wicket:message key="workReports" /></legend>
+				<div class="row" style="margin:10px 0 0 10px;">
+					<div class="alert alert-error control-group" wicket:id="feedback"></div>
+					<div class="control-group left" style="margin:2px;">
+						<label class="control-label"><wicket:message key="datefrom" /></label>
+						<div class="controls">
+							<input class="input-small" wicket:id="datefrom" />
+						</div>
+					</div>				
+					<div class="control-group left" style="margin:2px;">
+						<label class="control-label"><wicket:message key="dateto" /></label>
+						<div class="controls">
+							<input class="input-small" wicket:id="dateto" />
+						</div>
+					</div>
+					<div class="control-group left" style="margin-top:22px;">
+						<button type="submit" class="btn btn-primary left" style="margin:2px;"><wicket:message key="submitWork" /></button>
+						<button type="reset" class="btn left" style="margin:2px;"><wicket:message key="clean" /></button>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</fieldset>
+		</form>
+		<div class="well" wicket:id="memberReportList"></div>
+		</wicket:extend>
+	</body>
+</html>

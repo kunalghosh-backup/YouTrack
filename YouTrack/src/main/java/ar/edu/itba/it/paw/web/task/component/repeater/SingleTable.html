@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<wicket:panel>
+			<wicket:enclosure child="elements">
+				<table class="table-striped table-bordered" style="width:100%;">
+					<thead>
+						<tr>
+							<th><span wicket:id="title"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="elements">
+							<td><wicket:child /></td>
+						</tr>
+					</tbody>
+				</table>		
+			</wicket:enclosure>
+		</wicket:panel>
+	</body>
+</html>

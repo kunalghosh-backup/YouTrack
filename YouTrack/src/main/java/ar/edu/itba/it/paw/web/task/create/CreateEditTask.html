@@ -1,0 +1,116 @@
+<html>
+	<body>
+		<wicket:extend>
+			<form wicket:id="createTaskForm" class="form-horizontal">
+				<fieldset>
+					<legend><wicket:message key="taskFormLegend" /></legend>
+					<div wicket:id="feedback" class="alert alert-error control-group"></div>
+					<div class="row">
+						<div style="margin-top:10px;"></div>
+						<div class="span6">
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="title" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="title" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="description" /></label>
+								<div class="controls">
+									<textarea class="input-xlarge" wicket:id="description"></textarea>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="estimatedTime" /></label>
+								<div class="controls">
+									<input class="input-xlarge" wicket:id="duration" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="owner" /></label>
+								<div class="controls">
+									<!-- <select wicket:id="owner"></select> -->
+									<input wicket:id="owner" type="text" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="priority" /></label>
+								<div class="controls">
+									<select wicket:id="priority" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="type" /></label>
+								<div class="controls">
+									<select wicket:id="type" />
+								</div>
+							</div>
+						</div>
+						<div class="span6">
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="affectedVersion" /></label>
+								<div class="controls">
+									<select wicket:id="affectedVersions" multiple="multiple" />
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label"><wicket:message key="versions" /></label>
+								<div class="controls">
+									<select wicket:id="tversions" multiple="multiple" />
+								</div>
+							</div>
+						</div>
+					</div>
+					
+										
+					
+					<div class="row">
+						<div class="control-group span6">
+							<label class="control-label"><wicket:message key="dependsOn" /></label>
+							<div class="controls">
+								<select wicket:id="dependsOnList" multiple="multiple" />
+							</div>
+						</div>
+						
+						<div class="control-group span6">
+							<label class="control-label"><wicket:message key="relatedWith" /></label>
+							<div class="controls">
+								<select wicket:id="relatedWithList" multiple="multiple" />
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="control-group span6">
+							<label class="control-label"><wicket:message key="requiredFor" /></label>							
+							<div class="controls">
+								<select wicket:id="requiredForList" multiple="multiple" />
+							</div>
+						</div>
+	
+						<div class="control-group span6">
+							<label class="control-label"><wicket:message key="duplicatedWith" /></label>
+							<div class="controls">
+								<select wicket:id="duplicatedWithList" multiple="multiple" />
+							</div>
+						</div>					
+					</div>
+					
+					
+					<div class="form-actions">
+						<button wicket:id="createTaskButton" class="btn btn-primary"><wicket:message key="createTaskButton" /></button>
+						<button wicket:id="saveTaskButton" class="btn btn-primary"><wicket:message key="saveChanges" /></button>
+						<a class="btn" wicket:id="cancel"><wicket:message key="cancel" /></a>
+					</div>
+					
+				</fieldset>
+			</form>
+		</wicket:extend>
+	</body>
+</html>

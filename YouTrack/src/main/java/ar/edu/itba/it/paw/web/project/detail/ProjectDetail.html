@@ -1,0 +1,77 @@
+<html>
+	<body>
+		<wicket:extend>
+			<div class="well">
+			<h2><wicket:message key="projectDetailTitle" /></h2>
+				<a class="btn right" wicket:id="backButton"><i class="icon-arrow-left"></i> <wicket:message key="backButton" /></a>
+				<a class="btn " wicket:id="membersWorkButton"><i class="icon-tag"></i> <wicket:message key="membersWorkButton" /></a>
+			</div>
+		<div class="well">
+			<h3><wicket:message key="projectInfo" /></h3>
+			<div>
+				<div class="left" style="width:33%; margin-top:10px;">
+					<h4><wicket:message key="code" /></h4>
+					<div wicket:id="code"></div>
+				</div>
+				<div class="left" style="width:33%; margin-top:10px;">
+					<h4><wicket:message key="title" /></h4>
+					<div wicket:id="title"></div>
+				</div>
+				<div class="left" style="width:33%; margin-top:10px;">
+					<h4><wicket:message key="description" /></h4>
+					<div wicket:id="description"></div>
+				</div>
+				<div class="left" style="width:33%; margin-top:10px;">
+					<h4><wicket:message key="visibility" /></h4>
+					<div wicket:id="status"></div>
+				</div>
+				<div class="left" style="width:33%; margin-top:10px;">
+					<h4><wicket:message key="creationDate" /></h4>
+					<div wicket:id="createdAt"></div>
+				</div>
+				<div class="left" style="width:33%; margin-top:10px;">
+					<h4><wicket:message key="ownerUser" /></h4>
+					<div wicket:id="owner"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="well">
+			<div>
+				<h3 class="left"><wicket:message key="projectMembersListTitle" /></h3>
+				<a class="btn right" style="margin-bottom:10px;" wicket:id="addMembersButton"><i class="icon-plus"></i> <wicket:message key="addMembers" /></a>
+				<div class="clear"></div>
+			</div>
+			<table class="table-bordered table-striped" style="width:100%;">
+				  <thead>
+				    <tr>
+				      <th><wicket:message key="username" /></th>
+				      <th><wicket:message key="fullname" /></th>
+				      <th><wicket:message key="email" /></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr wicket:id="projectMemberList">
+						<td class="centered-text">
+							<span wicket:id="userName"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="name"></span>
+							<span wicket:id="lastName"></span>
+						</td>
+						<td class="centered-text">
+							<span wicket:id="email"></span>
+						</td>
+						<td class="centered-text">
+							<a wicket:id="remove"><i class="icon-remove"></i></a>
+						</td>
+				    </tr>
+				  </tbody>
+			</table>
+		</div>
+		<div class="well" wicket:id="projectVersionPanel" ></div>
+		<div class="well" wicket:id="taskStatisticsPanel" ></div>
+		<div class="well" wicket:id="lastChangesPanel"></div>
+		</wicket:extend>
+	</body>
+</html>

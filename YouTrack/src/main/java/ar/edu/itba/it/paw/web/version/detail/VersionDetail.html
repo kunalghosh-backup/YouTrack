@@ -1,0 +1,32 @@
+<html>
+	<body>
+		<wicket:extend>
+			<div wicket:id="menu"></div>
+			<div style="margin-top:10px;"><h2 wicket:id="name"></h2></div>
+			<div wicket:id="description"></div>
+			<div>
+				<div style="margin-top:10px;">
+					<h3><wicket:message key="errors" /></h3>
+					<table wicket:id="errors" class="table-bordered table-striped cooldatatable"></table>
+				</div>
+				<div style="margin-top:10px;">
+					<h3><wicket:message key="improvements" /></h3>
+					<table wicket:id="improvements" class="table-bordered table-striped cooldatatable"></table>
+				</div>
+				<div style="margin-top:10px;">
+					<h3><wicket:message key="features" /></h3>
+					<table wicket:id="features" class="table-bordered table-striped cooldatatable"></table>
+				</div>
+				<div style="margin-top:10px;">
+					<h3><wicket:message key="tasks" /></h3>
+					<table wicket:id="tasks" class="table-bordered table-striped cooldatatable"></table>
+				</div>
+				<div style="margin-top:10px;">
+					<h3><wicket:message key="technicals" /></h3>
+					<table wicket:id="technicals" class="table-bordered table-striped cooldatatable"></table>
+				</div>		
+			</div>
+			<div wicket:id="graph" style="margin-top:30px;"></div>
+		</wicket:extend>
+	</body>
+</html>

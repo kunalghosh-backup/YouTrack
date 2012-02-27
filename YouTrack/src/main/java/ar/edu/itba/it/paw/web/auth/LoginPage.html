@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<wicket:extend>
+			<form wicket:id="loginForm" class="form-horizontal">
+				<fieldset>
+					<legend><wicket:message key="loginFormLegend" /></legend>
+					<div>
+						<p class="help-block"><wicket:message key="loginFormDetail" /></p>
+					</div>
+					<div class="alert alert-error control-group" wicket:id="feedback"></div>
+					<div class="control-group" style="margin-top:20px;">
+						<label class="control-label"><wicket:message key="username" /></label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" wicket:id="username" />
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"><wicket:message key="password" /></label>
+						<div class="controls">
+							<input type="password" class="input-xlarge" wicket:id="password" />
+						</div>
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary" wicket:id="signin"><wicket:message key="submitButton" /></button>
+						<button wicket:id="registerLink" class="btn"><wicket:message key="registerLink" /></button>
+					</div>
+				</fieldset>
+			</form>
+		</wicket:extend>
+	</body>
+</html>

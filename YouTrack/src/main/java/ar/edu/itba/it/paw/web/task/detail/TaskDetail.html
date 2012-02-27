@@ -1,0 +1,152 @@
+<html>
+<body>
+	<wicket:extend>
+		<div wicket:id="workingProjectMenu"></div>
+		
+		<div id="taskDetail" class="well" style="margin-bottom:5px;">
+			<h2><wicket:message key="task" />: <span wicket:id="title"></span>(<span wicket:id="code"></span>)</h2>
+			
+			<div wicket:id="feedback" class="alert alert-error control-group"></div>
+			
+			<div class="span12" style="margin-top:10px;">
+				<a wicket:id="takeTaskButton" class="btn"><i class="icon-tag"></i> <wicket:message key="takeTask" /></a>
+				<a wicket:id="startWorkButton" class="btn"><i class="icon-flag"></i> <wicket:message key="startWork" /></a>
+				<a wicket:id="backToOpenButton" class="btn"><i class="icon-arrow-left"></i> <wicket:message key="backToOpen" /></a>
+				<a wicket:id="closeTaskButton" class="btn"><i class="icon-remove-circle"></i> <wicket:message key="closeTask" /></a>
+				<a wicket:id="vote" class="btn"><i class="icon-star"></i> <wicket:message key="vote" /> (<span wicket:id="votes"></span>)</a>
+				<a wicket:id="unvote" class="btn"><i class="icon-star-empty"></i> <wicket:message key="unvote" /> (<span wicket:id="votes"></span>)</a>
+			</div>
+			
+			<div class="span12" style="margin-top:10px;">
+				<div class="row">
+					<div class="span4">
+						<h4><wicket:message key="creator" /></h4>
+						<div wicket:id="creator"></div>
+					</div>
+					<div class="span4">
+						<h4><wicket:message key="creationDate" /></h4>
+						<div wicket:id="createdAt"></div>
+					</div>
+					<div class="span4">
+						<h4><wicket:message key="description" /></h4>
+						<div wicket:id="description"></div>					
+					</div>
+				</div>
+				<div class="row" style="margin-top:10px;">
+					<div class="span4">
+						<h4><wicket:message key="priority" /></h4>
+						<div><span wicket:id="priority" class="label"></span></div>
+					</div>
+					<div class="span4">
+						<h4><wicket:message key="estimatedTime" /></h4>
+						<div wicket:id="duration"></div>
+					</div>
+					<div class="span4">
+						<h4><wicket:message key="status" /></h4>
+						<div>
+							<span wicket:id="status" class="label"></span>
+							<wicket:enclosure child="solution">
+								(<span wicket:id="solution"></span>)
+							</wicket:enclosure>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="margin-top:10px;">
+					<div class="span4">
+						<h4><wicket:message key="owner" /></h4>
+						<div wicket:id="owner"></div>
+					</div>
+					<div class="span4">
+						<h4><wicket:message key="workedTime" /></h4>
+						<div wicket:id="workedTime"></div>
+					</div>
+					<div class="span4">
+						<h4><wicket:message key="type" /></h4>
+						<div wicket:id="type"></div>
+					</div>
+				</div>
+			</div>
+			<div class="span12" style="margin-top:10px;">
+				<h4><wicket:message key="progress" /></h4>
+				<div wicket:id="progress" style="width:850px;"></div>
+			</div>
+			<div class="row">
+				<div style="margin-top:10px;width:850px;padding-left:40px;">
+					<div wicket:id="versionList" style="width:50%;" class="left"></div>
+					<div wicket:id="affectedVersionList" style="width:50%;" class="left"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div style="width:850px;padding-left:40px;margin-top:10px;">
+					<table wicket:id="dependsOn" class="left table-bordered table-striped cooldatatable" style="width:25%;"></table>
+					<table wicket:id="requiredFor" class="left table-bordered table-striped cooldatatable" style="width:25%;"></table>
+					<table wicket:id="relatedWith" class="left table-bordered table-striped cooldatatable" style="width:25%;"></table>
+					<table wicket:id="duplicatedWith" class="left table-bordered table-striped cooldatatable" style="width:25%;"></table>
+				</div>
+			</div>
+			<div class="span4 well" wicket:id="resolvePanel" style="padding:5px 10px;margin-top:20px;"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="well left" style="width:427px;margin-bottom:5px;">
+			<h2><wicket:message key="comments" /></h2>
+			<div class="centered-text" wicket:id="emptyComments"></div>
+			<wicket:enclosure child="comments">
+				<table style="width:100%;" class="table">
+					<thead>
+						<tr>
+							<th><wicket:message key="date" /></th>
+							<th><wicket:message key="comment" /></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="comments">
+							<td><span wicket:id="createdAt"></span></td>
+							<td>
+								<div><span><b><wicket:message key="author" /></b>: </span><span wicket:id="author"></span></div>
+								<div><span><b><wicket:message key="comment" /></b>: </span><span wicket:id="comment"></span></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</wicket:enclosure>
+			<div wicket:id="commentForm"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="well right" style="width:427px;margin-bottom:5px;">
+			<h2><wicket:message key="files" /></h2>
+			<div class="centered-text" wicket:id="emptyFiles"></div>
+			<wicket:enclosure child="files">
+				<table style="width:100%;" class="table">
+					<thead>
+						<tr>
+							<th><wicket:message key="file" /></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="files">
+							<td>
+								<span wicket:id="filename"></span> (<span wicket:id="contentType"></span>)
+							</td>
+							<td>
+								<a wicket:id="download"><wicket:message key="download" /></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</wicket:enclosure>
+			<div wicket:id="fileForm"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="well" style="margin-bottom:5px;">
+			<h2><wicket:message key="workReports" /></h2>
+			<div wicket:id="works"></div>
+		</div>
+		<div class="well">
+			<h2><wicket:message key="changeHistory" /></h2>
+			<div wicket:id="changesPanel"></div>
+		</div>
+		
+	</wicket:extend>
+</body>
+</html>
